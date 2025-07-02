@@ -25,3 +25,6 @@ dist-ssr
 
 # Files to ignore
 update-react-container.sh
+
+# Folders to ignore
+archived/
