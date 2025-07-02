@@ -6,7 +6,7 @@ const TopBar = ({ onToggleSidebar, sidebarOpen, isMobile }) => {
 
   const getPageTitle = () => {
     const titles = {
-      "/": "Dashboard",
+      "/": "Home",
       "/analytics": "Analytics",
       "/projects": "Projects",
       "/team": "Team",
@@ -25,7 +25,7 @@ const TopBar = ({ onToggleSidebar, sidebarOpen, isMobile }) => {
           aria-label="Toggle sidebar"
         >
           <i
-            className={`bi ${sidebarOpen && !isMobile ? "bi-x-lg" : "bi-list"}`}
+            className={`bi ${sidebarOpen && !isMobile ? "bi-chevron-left" : "bi-list"}`}
           ></i>
         </button>
         <h4 className="mb-0">{getPageTitle()}</h4>
