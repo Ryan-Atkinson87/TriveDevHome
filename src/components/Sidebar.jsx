@@ -6,11 +6,12 @@ const Sidebar = ({ isOpen, isMobile, onClose }) => {
 
   const navItems = [
     { path: "/", label: "Home", icon: "bi-house-door" },
-    { path: "/analytics", label: "Analytics", icon: "bi-bar-chart" },
+    { path: "skills", label: "Skills", icon: "bi-terminal" },
+    //{ path: "/analytics", label: "Analytics", icon: "bi-bar-chart" },
     { path: "/projects", label: "Projects", icon: "bi-folder" },
-    { path: "/team", label: "Team", icon: "bi-people" },
-    { path: "/messages", label: "Messages", icon: "bi-chat-dots" },
-    { path: "/settings", label: "Settings", icon: "bi-gear" },
+    //{ path: "/team", label: "Team", icon: "bi-people" },
+    //{ path: "/messages", label: "Messages", icon: "bi-chat-dots" },
+    //{ path: "/settings", label: "Settings", icon: "bi-gear" },
   ];
 
   const isActive = (path) => {
