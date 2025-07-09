@@ -1,12 +1,11 @@
+# Stage 1: Build
+FROM node:20 AS builder
+WORKDIR /app
+COPY . .
+RUN npm ci
+RUN npm run build
+
+# Stage 2: Serve
 FROM nginx:alpine
-
-# Remove default nginx website (optional)
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy the Vite build output (dist) to nginx html folder
-COPY dist/ /usr/share/nginx/html
-
+COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
-

@@ -37,6 +37,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: ./Dockerfile   # <-- This line ensures the correct Dockerfile is used
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ryanatkinson1987/trive-dev-home:latest
+
